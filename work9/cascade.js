@@ -87,18 +87,18 @@ var majorSelect = document.getElementById('majorSelect')
 collegeSelect.onchange = function(){
     majorSelect.options.length = 0;
     createOption(majorSelect,majors[collegeSelect.value]);
-}
-
-var classSelect = document.getElementById('classSelect')
-majorSelect.onchange = function(){
-    classSelect.options.length = 0;
-    createOption(classSelect,classes[ollegeSelect.value] [omajorSelect.value]);
     //以下是新增代码
     if (collegeSelect.value >= 0) {
         majorSelect.onchange();
     } else {
     classSelect.options.length = 0;
     }
+}
+
+var classSelect = document.getElementById('classSelect')
+majorSelect.onchange = function(){
+    classSelect.options.length = 0;
+    createOption(classSelect,classes[collegeSelect.value] [majorSelect.value]);
 
 }
 
