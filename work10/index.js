@@ -24,12 +24,36 @@ function monkey(){
 }
 
 //待统计字符串代码
-function stst(){
+
+
+function stat(){
+    let str = document.getElementById("str").value
+    let obj = {}
+    let num= str.split('').sort()
+    obj= num.reduce((zimu, i) => {zimu[i] ? ++zimu[i] : zimu[i] = 1;return zimu}, {})
+    document.getElementById('result').innerText = JSON.stringify(obj)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function stst(){
     let str = document.getElementById("str").value
     let obj = {}
     str = parseInt(str) && Number(str)
-    var i = 0;
- 
+    let str = str.split("")
+    str = str.sort()
 	for(i = 0; i < str.length; i++)
 	{
 		key = str[i];
@@ -46,11 +70,9 @@ function stst(){
 		}
 	}
  
-	for(var str in obj) //遍历这个对象
+	for(var key in obj) //遍历这个对象
 	{
-		console.log(key + "这个字母出现了" + obj[key] + "次");
-
+        console.log(key + "这个字母出现了" + obj[key] + "次");
 	}
-
     document.getElementById('result').innerText = JSON.stringify(obj)
-}
+}*/
